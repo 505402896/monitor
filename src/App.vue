@@ -48,29 +48,29 @@
               <div>
                 <div class="icon"></div>
                 <h3>XXX</h3>
-                <p>今日施工人数</p>
+                <p>工期</p>
               </div>
               <div>
                 <div class="icon"></div>
                 <h3>XXX</h3>
-                <p>今日施工人数</p>
+                <p>结构量</p>
               </div>
             </div>
             <div class="data__left-down">
               <div>
                 <div class="icon"></div>
                 <h3>XXX</h3>
-                <p>今日施工人数</p>
+                <p>管理人员人数</p>
               </div>
               <div>
                 <div class="icon"></div>
                 <h3>XXX</h3>
-                <p>今日施工人数</p>
+                <p>安全生产</p>
               </div>
               <div>
                 <div class="icon"></div>
                 <h3>XXX</h3>
-                <p>今日施工人数</p>
+                <p>项目面积</p>
               </div>
             </div>
           </div>
@@ -135,7 +135,7 @@ export default {
       this.myChart.setOption({
         grid: {
           top: '30px',
-          left: '30px',
+          left: '50px',
           right: '10px',
           bottom: '30px'
         },
@@ -147,10 +147,13 @@ export default {
         },
         xAxis: {
           type: 'category',
+          axisLabel: {
+            interval: 0
+          },
           data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月']
         },
         yAxis: {
-          axisTick: {
+          splitLine: {
             show: false
           },
           type: 'value',
@@ -200,9 +203,11 @@ $--grey: rgb(214,224,235);
     background: url('./img/3.png');
     h1{
       width: 100%;
+      font-size: 38px;
+      // font-family: YouYuan, Arial, sans-serif;
       color: $--primary-blue;
       text-align: center;
-      line-height: 200px;
+      line-height: 180px;
     }
     a{
       display: block;
@@ -289,6 +294,7 @@ $--grey: rgb(214,224,235);
     }
     .model{
       position: relative;
+      width: 100%;
       height: 495px;
       background-color: $--grey;
       border-image: url('./img/1.png') 32 37 fill / 32px 37px / 0 stretch;
@@ -323,10 +329,9 @@ $--grey: rgb(214,224,235);
       margin-bottom: 15px;
       border-image: url('./img/1.png') 32 37 fill / 32px 37px / 0 stretch;
       .title{
-        height: 20px;
-        line-height: 20px;
         color: #fff;
-        margin-left: 10px;
+        padding: 8px;
+        font-size: 14px;
       }
       .pic{
         width: 100%;
@@ -336,7 +341,9 @@ $--grey: rgb(214,224,235);
         width: 100%;
         color: #fff;
         font-size: 10px;
+        border-collapse: collapse;
         thead{
+          padding: 20px;
           background: $--bc-blue;
         }
       }
